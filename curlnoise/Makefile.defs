@@ -1,0 +1,20 @@
+# The entries below are for writing programs that call glut and OpenGL; if you don't need
+# that then you can strip out a lot of the LINK_LIBS (-lGL -lGLU -lglut on Linux for example)
+
+# local machine settings
+
+# For example, on Linux on a PC this will likely work:
+# DEPEND = g++
+# CC = g++ -Wall
+# RELEASE_FLAGS = -O3 -DNDEBUG -funroll-loops
+# DEBUG_FLAGS = -g
+# LINK = g++
+# LINK_LIBS = -lm -lGL -lGLU -lglut
+
+# On Mac OS X (on a G5), this probably will work:
+DEPEND = g++
+CC = g++ -Wall
+RELEASE_FLAGS = -DNDEBUG -fast -mcpu=7450
+DEBUG_FLAGS = -g
+LINK = g++
+LINK_LIBS = -lm -lobjc -framework OpenGL -framework GLUT
